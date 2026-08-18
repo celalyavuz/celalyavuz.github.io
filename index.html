@@ -21,7 +21,7 @@
             --green: #059669;
             --purple: #7C3AED;
             --pink: #DB2777;
-            --body-bg: #E2E8F0; /* Rahatlatıcı soft gri-mavi arka plan */
+            --body-bg: #E2E8F0;
             --card-shadow: 0 8px 24px rgba(15, 37, 55, 0.08);
         }
 
@@ -39,7 +39,7 @@
             font-family: 'Fredoka', 'Outfit', sans-serif;
             background-color: var(--body-bg);
             color: var(--dark-navy);
-            line-height: 1.6;
+            line-height: 1.5;
             overflow-x: hidden;
         }
 
@@ -58,11 +58,11 @@
             font-weight: 600;
         }
 
-        /* HERO ALANI - KOYU MAVİ TEMALI */
+        /* HERO ALANI */
         header {
             background: linear-gradient(135deg, #0F2537 0%, #1E3A8A 55%, #2563EB 100%);
             color: white;
-            padding: 60px 20px 80px;
+            padding: 50px 20px 70px;
             border-bottom-left-radius: 40px;
             border-bottom-right-radius: 40px;
             box-shadow: 0 12px 30px rgba(15, 37, 55, 0.25);
@@ -82,7 +82,7 @@
 
         .floating-icon {
             position: absolute;
-            font-size: 2.2rem;
+            font-size: 2rem;
             opacity: 0.18;
             animation: float 6s ease-in-out infinite alternate;
         }
@@ -94,17 +94,17 @@
 
         @keyframes float {
             0% { transform: translateY(0px) rotate(0deg); }
-            100% { transform: translateY(-16px) rotate(10deg); }
+            100% { transform: translateY(-14px) rotate(10deg); }
         }
 
         .badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.15);
-            padding: 8px 24px;
+            padding: 6px 20px;
             border-radius: 50px;
-            font-size: 0.98rem;
+            font-size: 0.95rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.25);
             letter-spacing: 0.5px;
@@ -112,17 +112,17 @@
         }
 
         h1 {
-            font-size: 3.4rem;
+            font-size: 3.2rem;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: #FFFFFF;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .hero-desc {
-            font-size: 1.3rem;
-            max-width: 720px;
-            margin: 0 auto 35px;
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 28px;
             font-weight: 400;
             color: #E2E8F0;
             opacity: 0.95;
@@ -138,9 +138,9 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 16px 36px;
+            padding: 14px 32px;
             border-radius: 50px;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 700;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -162,7 +162,7 @@
         /* MAIN WRAPPER */
         .main-wrapper {
             max-width: 1140px;
-            margin: -40px auto 60px;
+            margin: -35px auto 50px;
             padding: 0 20px;
             position: relative;
             z-index: 2;
@@ -172,17 +172,17 @@
         .highlights-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-bottom: 50px;
+            gap: 16px;
+            margin-bottom: 40px;
         }
 
         .highlight-card {
             background: #FFFFFF;
-            padding: 25px 20px;
-            border-radius: 24px;
+            padding: 20px 16px;
+            border-radius: 20px;
             text-align: center;
             box-shadow: var(--card-shadow);
-            border-top: 5px solid var(--accent-blue);
+            border-top: 4px solid var(--accent-blue);
         }
 
         .highlight-card:nth-child(2) { border-top-color: var(--green); }
@@ -190,14 +190,14 @@
         .highlight-card:nth-child(4) { border-top-color: var(--yellow); }
 
         .highlight-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 18px;
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.2rem;
-            margin: 0 auto 14px;
+            font-size: 1.8rem;
+            margin: 0 auto 10px;
         }
 
         .hl-1 { background: #EFF6FF; }
@@ -206,21 +206,21 @@
         .hl-4 { background: #FEF3C7; }
 
         .highlight-card h3 {
-            font-size: 1.18rem;
+            font-size: 1.1rem;
             color: var(--dark-navy);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             font-weight: 700;
         }
 
         .highlight-card p {
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             color: #475569;
         }
 
         /* BAŞLIK GRUPLARI */
         .section-title-wrap {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .section-tag {
@@ -228,85 +228,81 @@
             color: #FFFFFF;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 0.85rem;
-            margin-bottom: 8px;
+            letter-spacing: 1.2px;
+            font-size: 0.8rem;
+            margin-bottom: 6px;
             background: var(--primary-blue);
-            padding: 5px 18px;
+            padding: 4px 16px;
             border-radius: 20px;
             box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
         }
 
         .section-title {
-            font-size: 2.3rem;
+            font-size: 2.1rem;
             color: var(--dark-navy);
             font-weight: 700;
         }
 
         .section-desc {
             color: #475569;
-            font-size: 1.08rem;
+            font-size: 1rem;
             max-width: 650px;
-            margin: 8px auto 0;
+            margin: 6px auto 0;
             font-weight: 500;
         }
 
-        /* MOD KONTEYNERLERİ - RENKLİ VE DERİNLİKLİ */
+        /* MOD KONTEYNERLERİ - DİKEY OLARAK DARALTILMIŞ (COMPACT) */
         .mode-container {
-            border-radius: 32px;
-            padding: 40px;
-            margin-bottom: 45px;
+            border-radius: 28px;
+            padding: 26px 28px;
+            margin-bottom: 32px;
             box-shadow: var(--card-shadow);
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        /* 1. EĞİTİM MODU CONTAINER (SOFT MAVİ) */
         .mode-egitim {
             background: #EBF5FF;
-            border-top: 6px solid var(--accent-blue);
+            border-top: 5px solid var(--accent-blue);
         }
 
-        /* 2. OYUN MODU CONTAINER (SOFT YEŞİL) */
         .mode-oyun {
             background: #E6F4EA;
-            border-top: 6px solid var(--green);
+            border-top: 5px solid var(--green);
         }
 
-        /* 3. ÇİZİM MODU CONTAINER (SOFT MOR) */
         .mode-cizim {
             background: #F3E8FF;
-            border-top: 6px solid var(--purple);
+            border-top: 5px solid var(--purple);
         }
 
-        /* 4. MÜZİK MODU CONTAINER (SOFT AMBER) */
         .mode-muzik {
             background: #FEF3C7;
-            border-top: 6px solid var(--yellow);
+            border-top: 5px solid var(--yellow);
         }
 
-        /* MOD BAŞLIKLARI - TAMAMEN ORTALANMIŞ */
+        /* MOD BAŞLIKLARI - SIKIŞTIRILMIŞ VE ŞIK DİKEY YAPI */
         .mode-header {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            gap: 12px;
-            margin-bottom: 30px;
-            padding-bottom: 22px;
+            gap: 8px;
+            margin-bottom: 20px;
+            padding-bottom: 14px;
             border-bottom: 2px dashed rgba(15, 37, 55, 0.12);
         }
 
         .mode-badge-icon {
-            width: 65px;
-            height: 65px;
-            border-radius: 20px;
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.2rem;
+            font-size: 1.75rem;
             color: white;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
         }
 
         .bg-egitim { background: linear-gradient(135deg, #1E3A8A, #2563EB); }
@@ -315,103 +311,103 @@
         .bg-muzik { background: linear-gradient(135deg, #B45309, #F59E0B); }
 
         .mode-title-info h2 {
-            font-size: 1.9rem;
+            font-size: 1.6rem;
             color: var(--dark-navy);
             font-weight: 700;
+            line-height: 1.2;
         }
 
         .mode-title-info p {
             color: #334155;
-            font-size: 1.05rem;
+            font-size: 0.98rem;
             max-width: 550px;
-            margin: 4px auto 0;
+            margin: 2px auto 0;
             font-weight: 500;
         }
 
         /* KART GRID YAPISI */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
         }
 
-        /* KARTLAR - SAF BEYAZ ZEMİN, KENAR ÇİZGİLİ VE GÖLGELİ */
         .sub-card {
             background: #FFFFFF;
-            border-radius: 20px;
-            padding: 22px;
+            border-radius: 18px;
+            padding: 18px;
             transition: all 0.25s ease;
-            box-shadow: 0 4px 15px rgba(15, 37, 55, 0.05);
+            box-shadow: 0 4px 12px rgba(15, 37, 55, 0.04);
             border: 1px solid rgba(0, 0, 0, 0.06);
         }
 
-        .mode-egitim .sub-card { border-left: 5px solid var(--accent-blue); }
-        .mode-oyun .sub-card { border-left: 5px solid var(--green); }
-        .mode-cizim .sub-card { border-left: 5px solid var(--purple); }
-        .mode-muzik .sub-card { border-left: 5px solid var(--yellow); }
+        .mode-egitim .sub-card { border-left: 4px solid var(--accent-blue); }
+        .mode-oyun .sub-card { border-left: 4px solid var(--green); }
+        .mode-cizim .sub-card { border-left: 4px solid var(--purple); }
+        .mode-muzik .sub-card { border-left: 4px solid var(--yellow); }
 
         .sub-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(15, 37, 55, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(15, 37, 55, 0.1);
         }
 
         .sub-card-header {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 10px;
+            gap: 10px;
+            margin-bottom: 8px;
         }
 
         .sub-icon {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
 
         .sub-card h4 {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--dark-navy);
             font-weight: 700;
         }
 
         .sub-card p {
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             color: #334155;
         }
 
         /* GİZLİLİK POLİTİKASI (PRIVACY POLICY) */
         .policy-container {
             background: #FFFFFF;
-            border-radius: 32px;
-            padding: 40px;
-            margin-bottom: 45px;
+            border-radius: 28px;
+            padding: 30px;
+            margin-bottom: 35px;
             box-shadow: var(--card-shadow);
-            border-top: 6px solid var(--dark-navy);
+            border-top: 5px solid var(--dark-navy);
         }
 
         .policy-header {
             text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
             border-bottom: 2px solid #E2E8F0;
         }
 
         .policy-header h2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: var(--dark-navy);
             font-weight: 700;
         }
 
         .policy-content p {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: #334155;
-            font-size: 1.02rem;
+            font-size: 0.98rem;
         }
 
         .policy-box {
             background: #F8FAFC;
-            padding: 22px;
-            border-radius: 18px;
-            border-left: 5px solid var(--primary-blue);
-            margin: 20px 0;
+            padding: 18px;
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-blue);
+            margin: 16px 0;
             border: 1px solid #E2E8F0;
         }
 
@@ -419,13 +415,13 @@
         footer {
             background: #0B192C;
             color: #94A3B8;
-            padding: 45px 20px 30px;
+            padding: 40px 20px 25px;
             text-align: center;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
         }
 
         .footer-links {
-            margin: 18px 0;
+            margin: 15px 0;
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -451,7 +447,7 @@
             padding: 6px 18px;
             border-radius: 50px;
             font-size: 0.85rem;
-            margin-top: 15px;
+            margin-top: 12px;
             border: 1px solid rgba(255, 255, 255, 0.15);
             text-decoration: none;
         }
@@ -461,10 +457,10 @@
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .hero-desc { font-size: 1.15rem; }
-            .mode-container { padding: 25px; }
-            .policy-container { padding: 25px; }
+            h1 { font-size: 2.3rem; }
+            .hero-desc { font-size: 1.1rem; }
+            .mode-container { padding: 20px; }
+            .policy-container { padding: 20px; }
         }
     </style>
 </head>
@@ -531,7 +527,7 @@
             <p class="section-desc">Çocuğunuzun zihinsel ve motor becerilerini geliştiren 4 ana mod ve onlarca kategori!</p>
         </div>
 
-        <!-- 1. EĞİTİM MODU (SOFT MAVİ TEMA) -->
+        <!-- 1. EĞİTİM MODU (COMPACT DARALTILMIŞ BAŞLIK) -->
         <div class="mode-container mode-egitim">
             <div class="mode-header">
                 <div class="mode-badge-icon bg-egitim">📘</div>
@@ -624,7 +620,7 @@
             </div>
         </div>
 
-        <!-- 2. OYUN MODU (SOFT YEŞİL TEMA) -->
+        <!-- 2. OYUN MODU (COMPACT DARALTILMIŞ BAŞLIK) -->
         <div class="mode-container mode-oyun">
             <div class="mode-header">
                 <div class="mode-badge-icon bg-oyun">🧩</div>
@@ -669,7 +665,7 @@
             </div>
         </div>
 
-        <!-- 3. ÇİZİM MODU (SOFT MOR TEMA) -->
+        <!-- 3. ÇİZİM MODU (COMPACT DARALTILMIŞ BAŞLIK) -->
         <div class="mode-container mode-cizim">
             <div class="mode-header">
                 <div class="mode-badge-icon bg-cizim">✏️</div>
@@ -698,7 +694,7 @@
             </div>
         </div>
 
-        <!-- 4. MÜZİK VE ENSTRÜMAN MODU (SOFT AMBER TEMA) -->
+        <!-- 4. MÜZİK MODU (COMPACT DARALTILMIŞ BAŞLIK) -->
         <div class="mode-container mode-muzik">
             <div class="mode-header">
                 <div class="mode-badge-icon bg-muzik">🎹</div>
@@ -761,7 +757,7 @@
 
         <p>&copy; 2026 Minik Akademi. Tüm Hakları Saklıdır.</p>
         
-        <div style="margin-top: 15px;">
+        <div style="margin-top: 12px;">
             <a href="/app-ads.txt" target="_blank" class="ads-txt-badge">
                 AdMob Yayıncı Doğrulaması: app-ads.txt
             </a>
