@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minik Akademi - Okul Öncesi Eğitici Çocuk Oyunları</title>
+    <title>Minik Akademi - Okul Öncesi Eğitici Çocuk Uygulaması</title>
     <meta name="description" content="Minik Akademi: 3-7 yaş okul öncesi çocuklar için Harfler, Sayılar, Şekiller, Renkler, Hayvanlar, Çizim, Müzik ve Eğitici Oyunlar dünyası.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary: #FF5964;
-            --primary-orange: #FF8E53;
-            --yellow: #FFD166;
-            --green: #06D6A0;
-            --blue: #118AB2;
-            --purple: #8338EC;
-            --pink: #FF6496;
-            --dark: #1E293B;
-            --light-bg: #F8FAFC;
-            --card-shadow: 0 12px 30px rgba(0,0,0,0.06);
+            --primary-blue: #1E3A8A;
+            --dark-navy: #0F2537;
+            --accent-blue: #2563EB;
+            --secondary-teal: #0D9488;
+            --yellow: #F59E0B;
+            --green: #10B981;
+            --purple: #7C3AED;
+            --pink: #EC4899;
+            --body-bg: #F1F5F9;
+            --card-shadow: 0 10px 25px rgba(15, 37, 55, 0.06);
         }
 
         * {
@@ -37,15 +37,15 @@
 
         body {
             font-family: 'Fredoka', 'Outfit', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--dark);
+            background-color: var(--body-bg);
+            color: var(--dark-navy);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* BANNER HEADER */
+        /* ÜST DUYURU BANDI */
         .top-banner {
-            background: #1E293B;
+            background: #0B192C;
             color: #94A3B8;
             font-size: 0.85rem;
             text-align: center;
@@ -53,19 +53,19 @@
             letter-spacing: 0.5px;
         }
         .top-banner a {
-            color: var(--yellow);
+            color: #38BDF8;
             text-decoration: none;
             font-weight: 600;
         }
 
-        /* HERO SECTION */
+        /* HERO ALANI - GÖZ YORMAYAN KOYU MAVİ TEMALI */
         header {
-            background: linear-gradient(135deg, #FF5964 0%, #FF8E53 45%, #FFD166 100%);
+            background: linear-gradient(135deg, #0F2537 0%, #1E3A8A 55%, #2563EB 100%);
             color: white;
-            padding: 60px 20px 90px;
-            border-bottom-left-radius: 50px;
-            border-bottom-right-radius: 50px;
-            box-shadow: 0 15px 35px rgba(255, 89, 100, 0.25);
+            padding: 60px 20px 80px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 12px 30px rgba(15, 37, 55, 0.2);
             position: relative;
             text-align: center;
         }
@@ -83,7 +83,7 @@
         .floating-icon {
             position: absolute;
             font-size: 2.2rem;
-            opacity: 0.25;
+            opacity: 0.18;
             animation: float 6s ease-in-out infinite alternate;
         }
 
@@ -94,34 +94,37 @@
 
         @keyframes float {
             0% { transform: translateY(0px) rotate(0deg); }
-            100% { transform: translateY(-18px) rotate(12deg); }
+            100% { transform: translateY(-16px) rotate(10deg); }
         }
 
         .badge {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.25);
-            padding: 8px 22px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 24px;
             border-radius: 50px;
-            font-size: 1rem;
+            font-size: 0.98rem;
             font-weight: 600;
             margin-bottom: 20px;
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             letter-spacing: 0.5px;
+            color: #E2E8F0;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3.4rem;
             font-weight: 700;
             margin-bottom: 15px;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .hero-desc {
-            font-size: 1.35rem;
-            max-width: 750px;
+            font-size: 1.3rem;
+            max-width: 720px;
             margin: 0 auto 35px;
-            font-weight: 500;
+            font-weight: 400;
+            color: #E2E8F0;
             opacity: 0.95;
         }
 
@@ -129,14 +132,13 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            flex-wrap: wrap;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 16px 32px;
+            padding: 16px 36px;
             border-radius: 50px;
             font-size: 1.15rem;
             font-weight: 700;
@@ -146,72 +148,64 @@
         }
 
         .btn-google {
-            background: #000000;
-            color: #FFFFFF;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            background: #FFFFFF;
+            color: var(--dark-navy);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
         .btn-google:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            background: #111;
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.95);
-            color: var(--primary);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        .btn-secondary:hover {
-            transform: translateY(-4px);
-            background: #FFFFFF;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            background: #F8FAFC;
+            color: var(--accent-blue);
         }
 
         /* MAIN WRAPPER */
         .main-wrapper {
             max-width: 1140px;
-            margin: -50px auto 60px;
+            margin: -40px auto 60px;
             padding: 0 20px;
             position: relative;
             z-index: 2;
         }
 
-        /* QUICK STATS / HIGHLIGHTS */
+        /* ÖNE ÇIKAN ÖZELLİKLER */
         .highlights-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .highlight-card {
-            background: white;
+            background: #FFFFFF;
             padding: 25px;
-            border-radius: 28px;
+            border-radius: 24px;
             text-align: center;
             box-shadow: var(--card-shadow);
-            border: 2px solid #F1F5F9;
+            border: 1px solid #E2E8F0;
         }
 
         .highlight-icon {
-            width: 65px;
-            height: 65px;
-            border-radius: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2.2rem;
-            margin: 0 auto 15px;
+            margin: 0 auto 14px;
         }
 
         .hl-1 { background: #E0F2FE; }
         .hl-2 { background: #DCFCE7; }
         .hl-3 { background: #F3E8FF; }
-        .hl-4 { background: #FFE4E6; }
+        .hl-4 { background: #FEF3C7; }
 
         .highlight-card h3 {
-            font-size: 1.2rem;
-            color: var(--dark);
-            margin-bottom: 5px;
+            font-size: 1.18rem;
+            color: var(--dark-navy);
+            margin-bottom: 6px;
+            font-weight: 700;
         }
 
         .highlight-card p {
@@ -219,7 +213,7 @@
             color: #64748B;
         }
 
-        /* SECTION TITLES */
+        /* BAŞLIK GRUPLARI */
         .section-title-wrap {
             text-align: center;
             margin-bottom: 40px;
@@ -227,78 +221,87 @@
 
         .section-tag {
             display: inline-block;
-            color: var(--blue);
+            color: var(--primary-blue);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-size: 0.85rem;
             margin-bottom: 8px;
             background: #E0F2FE;
-            padding: 4px 14px;
+            padding: 4px 16px;
             border-radius: 20px;
         }
 
         .section-title {
             font-size: 2.3rem;
-            color: var(--dark);
+            color: var(--dark-navy);
             font-weight: 700;
         }
 
         .section-desc {
             color: #64748B;
-            font-size: 1.1rem;
+            font-size: 1.08rem;
             max-width: 650px;
             margin: 8px auto 0;
         }
 
-        /* MODES SECTIONS */
+        /* MOD KONTEYNERLERİ */
         .mode-container {
-            background: white;
-            border-radius: 36px;
+            background: #FFFFFF;
+            border-radius: 32px;
             padding: 40px;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
             box-shadow: var(--card-shadow);
-            border: 1px solid #F1F5F9;
+            border: 1px solid #E2E8F0;
         }
 
+        /* MOD BAŞLIKLARI - TAMAMEN ORTALANMIŞ */
         .mode-header {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 18px;
+            justify-content: center;
+            text-align: center;
+            gap: 12px;
             margin-bottom: 30px;
-            padding-bottom: 20px;
+            padding-bottom: 22px;
             border-bottom: 2px dashed #E2E8F0;
         }
 
         .mode-badge-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 18px;
+            width: 65px;
+            height: 65px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: white;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
         }
 
-        .bg-egitim { background: linear-gradient(135deg, #118AB2, #06D6A0); }
-        .bg-oyun { background: linear-gradient(135deg, #FF5964, #FF8E53); }
-        .bg-cizim { background: linear-gradient(135deg, #8338EC, #3A86EF); }
-        .bg-muzik { background: linear-gradient(135deg, #FFB703, #FB8500); }
+        .bg-egitim { background: linear-gradient(135deg, #1E3A8A, #2563EB); }
+        .bg-oyun { background: linear-gradient(135deg, #0D9488, #10B981); }
+        .bg-cizim { background: linear-gradient(135deg, #7C3AED, #A855F7); }
+        .bg-muzik { background: linear-gradient(135deg, #D97706, #F59E0B); }
 
         .mode-title-info h2 {
-            font-size: 1.8rem;
-            color: var(--dark);
+            font-size: 1.9rem;
+            color: var(--dark-navy);
+            font-weight: 700;
         }
 
         .mode-title-info p {
             color: #64748B;
-            font-size: 1rem;
+            font-size: 1.05rem;
+            max-width: 550px;
+            margin: 4px auto 0;
         }
 
+        /* KART GRID YAPISI */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 20px;
         }
 
@@ -306,15 +309,15 @@
             background: #F8FAFC;
             border-radius: 20px;
             padding: 22px;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
             border: 1px solid #E2E8F0;
         }
 
         .sub-card:hover {
             transform: translateY(-4px);
             background: #FFFFFF;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border-color: var(--primary-orange);
+            box-shadow: 0 10px 20px rgba(15, 37, 55, 0.08);
+            border-color: var(--accent-blue);
         }
 
         .sub-card-header {
@@ -330,7 +333,8 @@
 
         .sub-card h4 {
             font-size: 1.15rem;
-            color: var(--dark);
+            color: var(--dark-navy);
+            font-weight: 700;
         }
 
         .sub-card p {
@@ -340,15 +344,16 @@
 
         /* GİZLİLİK POLİTİKASI (PRIVACY POLICY) */
         .policy-container {
-            background: white;
-            border-radius: 36px;
-            padding: 45px;
-            margin-bottom: 50px;
+            background: #FFFFFF;
+            border-radius: 32px;
+            padding: 40px;
+            margin-bottom: 45px;
             box-shadow: var(--card-shadow);
-            border: 1px solid #F1F5F9;
+            border: 1px solid #E2E8F0;
         }
 
         .policy-header {
+            text-align: center;
             margin-bottom: 25px;
             padding-bottom: 15px;
             border-bottom: 2px solid #E2E8F0;
@@ -356,34 +361,35 @@
 
         .policy-header h2 {
             font-size: 1.8rem;
-            color: var(--dark);
+            color: var(--dark-navy);
+            font-weight: 700;
         }
 
         .policy-content p {
-            margin-bottom: 16px;
+            margin-bottom: 15px;
             color: #475569;
             font-size: 1.02rem;
         }
 
         .policy-box {
             background: #F8FAFC;
-            padding: 20px;
-            border-radius: 16px;
-            border-left: 4px solid var(--blue);
+            padding: 22px;
+            border-radius: 18px;
+            border-left: 4px solid var(--primary-blue);
             margin: 20px 0;
         }
 
         /* FOOTER */
         footer {
-            background: #0F172A;
+            background: #0B192C;
             color: #94A3B8;
-            padding: 50px 20px 30px;
+            padding: 45px 20px 30px;
             text-align: center;
             font-size: 0.95rem;
         }
 
         .footer-links {
-            margin: 20px 0;
+            margin: 18px 0;
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -391,14 +397,14 @@
         }
 
         .footer-links a {
-            color: var(--yellow);
+            color: #38BDF8;
             text-decoration: none;
             font-weight: 600;
             transition: color 0.2s;
         }
 
         .footer-links a:hover {
-            color: white;
+            color: #FFFFFF;
             text-decoration: underline;
         }
 
@@ -406,11 +412,16 @@
             display: inline-block;
             background: rgba(255, 255, 255, 0.08);
             color: #CBD5E1;
-            padding: 6px 16px;
+            padding: 6px 18px;
             border-radius: 50px;
             font-size: 0.85rem;
             margin-top: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            text-decoration: none;
+        }
+        .ads-txt-badge:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
         }
 
         @media (max-width: 768px) {
@@ -438,7 +449,7 @@
             <span class="floating-icon icon-4">🎵</span>
         </div>
 
-        <div class="badge">3–7 Yaş Okul Öncesi Eğitici Çocuk Oyunu</div>
+        <div class="badge">3–7 Yaş Okul Öncesi Eğitici Mobil Çocuk Uygulaması</div>
         <h1>Minik Akademi</h1>
         <p class="hero-desc">
             Çocuklar için Harfler, Sayılar, Şekiller, Renkler, Çizim, Müzik ve Eğlenceli Zeka Oyunları ile dolu interaktif bir öğrenme dünyası!
@@ -448,7 +459,6 @@
             <a href="https://play.google.com/store/apps/details?id=com.cyvz.minikakademi" target="_blank" class="btn btn-google">
                 <span>▶</span> Google Play'den İndir
             </a>
-        
         </div>
     </header>
 
@@ -696,7 +706,7 @@
                 </div>
 
                 <p>Sorularınız, istekleriniz veya geri bildirimleriniz için geliştirici ekibimizle iletişime geçebilirsiniz:</p>
-                <p>📧 <strong>E-Posta:</strong> <a href="mailto:ansayazilim@gmail.com" style="color: var(--blue);">ansayazilim@gmail.com</a></p>
+                <p>📧 <strong>E-Posta:</strong> <a href="mailto:ansayazilim@gmail.com" style="color: var(--accent-blue); font-weight: 600;">ansayazilim@gmail.com</a></p>
             </div>
         </div>
 
