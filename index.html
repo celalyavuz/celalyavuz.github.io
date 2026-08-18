@@ -17,12 +17,12 @@
             --dark-navy: #0F2537;
             --accent-blue: #2563EB;
             --secondary-teal: #0D9488;
-            --yellow: #F59E0B;
-            --green: #10B981;
+            --yellow: #D97706;
+            --green: #059669;
             --purple: #7C3AED;
-            --pink: #EC4899;
-            --body-bg: #F1F5F9;
-            --card-shadow: 0 10px 25px rgba(15, 37, 55, 0.06);
+            --pink: #DB2777;
+            --body-bg: #E2E8F0; /* Rahatlatıcı soft gri-mavi arka plan */
+            --card-shadow: 0 8px 24px rgba(15, 37, 55, 0.08);
         }
 
         * {
@@ -58,14 +58,14 @@
             font-weight: 600;
         }
 
-        /* HERO ALANI - GÖZ YORMAYAN KOYU MAVİ TEMALI */
+        /* HERO ALANI - KOYU MAVİ TEMALI */
         header {
             background: linear-gradient(135deg, #0F2537 0%, #1E3A8A 55%, #2563EB 100%);
             color: white;
             padding: 60px 20px 80px;
             border-bottom-left-radius: 40px;
             border-bottom-right-radius: 40px;
-            box-shadow: 0 12px 30px rgba(15, 37, 55, 0.2);
+            box-shadow: 0 12px 30px rgba(15, 37, 55, 0.25);
             position: relative;
             text-align: center;
         }
@@ -178,12 +178,16 @@
 
         .highlight-card {
             background: #FFFFFF;
-            padding: 25px;
+            padding: 25px 20px;
             border-radius: 24px;
             text-align: center;
             box-shadow: var(--card-shadow);
-            border: 1px solid #E2E8F0;
+            border-top: 5px solid var(--accent-blue);
         }
+
+        .highlight-card:nth-child(2) { border-top-color: var(--green); }
+        .highlight-card:nth-child(3) { border-top-color: var(--purple); }
+        .highlight-card:nth-child(4) { border-top-color: var(--yellow); }
 
         .highlight-icon {
             width: 60px;
@@ -196,9 +200,9 @@
             margin: 0 auto 14px;
         }
 
-        .hl-1 { background: #E0F2FE; }
-        .hl-2 { background: #DCFCE7; }
-        .hl-3 { background: #F3E8FF; }
+        .hl-1 { background: #EFF6FF; }
+        .hl-2 { background: #ECFDF5; }
+        .hl-3 { background: #F5F3FF; }
         .hl-4 { background: #FEF3C7; }
 
         .highlight-card h3 {
@@ -210,7 +214,7 @@
 
         .highlight-card p {
             font-size: 0.92rem;
-            color: #64748B;
+            color: #475569;
         }
 
         /* BAŞLIK GRUPLARI */
@@ -221,15 +225,16 @@
 
         .section-tag {
             display: inline-block;
-            color: var(--primary-blue);
+            color: #FFFFFF;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-size: 0.85rem;
             margin-bottom: 8px;
-            background: #E0F2FE;
-            padding: 4px 16px;
+            background: var(--primary-blue);
+            padding: 5px 18px;
             border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2);
         }
 
         .section-title {
@@ -239,20 +244,44 @@
         }
 
         .section-desc {
-            color: #64748B;
+            color: #475569;
             font-size: 1.08rem;
             max-width: 650px;
             margin: 8px auto 0;
+            font-weight: 500;
         }
 
-        /* MOD KONTEYNERLERİ */
+        /* MOD KONTEYNERLERİ - RENKLİ VE DERİNLİKLİ */
         .mode-container {
-            background: #FFFFFF;
             border-radius: 32px;
             padding: 40px;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
             box-shadow: var(--card-shadow);
-            border: 1px solid #E2E8F0;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* 1. EĞİTİM MODU CONTAINER (SOFT MAVİ) */
+        .mode-egitim {
+            background: #EBF5FF;
+            border-top: 6px solid var(--accent-blue);
+        }
+
+        /* 2. OYUN MODU CONTAINER (SOFT YEŞİL) */
+        .mode-oyun {
+            background: #E6F4EA;
+            border-top: 6px solid var(--green);
+        }
+
+        /* 3. ÇİZİM MODU CONTAINER (SOFT MOR) */
+        .mode-cizim {
+            background: #F3E8FF;
+            border-top: 6px solid var(--purple);
+        }
+
+        /* 4. MÜZİK MODU CONTAINER (SOFT AMBER) */
+        .mode-muzik {
+            background: #FEF3C7;
+            border-top: 6px solid var(--yellow);
         }
 
         /* MOD BAŞLIKLARI - TAMAMEN ORTALANMIŞ */
@@ -265,7 +294,7 @@
             gap: 12px;
             margin-bottom: 30px;
             padding-bottom: 22px;
-            border-bottom: 2px dashed #E2E8F0;
+            border-bottom: 2px dashed rgba(15, 37, 55, 0.12);
         }
 
         .mode-badge-icon {
@@ -277,13 +306,13 @@
             justify-content: center;
             font-size: 2.2rem;
             color: white;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
         }
 
         .bg-egitim { background: linear-gradient(135deg, #1E3A8A, #2563EB); }
-        .bg-oyun { background: linear-gradient(135deg, #0D9488, #10B981); }
-        .bg-cizim { background: linear-gradient(135deg, #7C3AED, #A855F7); }
-        .bg-muzik { background: linear-gradient(135deg, #D97706, #F59E0B); }
+        .bg-oyun { background: linear-gradient(135deg, #065F46, #10B981); }
+        .bg-cizim { background: linear-gradient(135deg, #5B21B6, #8B5CF6); }
+        .bg-muzik { background: linear-gradient(135deg, #B45309, #F59E0B); }
 
         .mode-title-info h2 {
             font-size: 1.9rem;
@@ -292,10 +321,11 @@
         }
 
         .mode-title-info p {
-            color: #64748B;
+            color: #334155;
             font-size: 1.05rem;
             max-width: 550px;
             margin: 4px auto 0;
+            font-weight: 500;
         }
 
         /* KART GRID YAPISI */
@@ -305,19 +335,24 @@
             gap: 20px;
         }
 
+        /* KARTLAR - SAF BEYAZ ZEMİN, KENAR ÇİZGİLİ VE GÖLGELİ */
         .sub-card {
-            background: #F8FAFC;
+            background: #FFFFFF;
             border-radius: 20px;
             padding: 22px;
             transition: all 0.25s ease;
-            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 15px rgba(15, 37, 55, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.06);
         }
 
+        .mode-egitim .sub-card { border-left: 5px solid var(--accent-blue); }
+        .mode-oyun .sub-card { border-left: 5px solid var(--green); }
+        .mode-cizim .sub-card { border-left: 5px solid var(--purple); }
+        .mode-muzik .sub-card { border-left: 5px solid var(--yellow); }
+
         .sub-card:hover {
-            transform: translateY(-4px);
-            background: #FFFFFF;
-            box-shadow: 0 10px 20px rgba(15, 37, 55, 0.08);
-            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(15, 37, 55, 0.12);
         }
 
         .sub-card-header {
@@ -339,7 +374,7 @@
 
         .sub-card p {
             font-size: 0.92rem;
-            color: #475569;
+            color: #334155;
         }
 
         /* GİZLİLİK POLİTİKASI (PRIVACY POLICY) */
@@ -349,7 +384,7 @@
             padding: 40px;
             margin-bottom: 45px;
             box-shadow: var(--card-shadow);
-            border: 1px solid #E2E8F0;
+            border-top: 6px solid var(--dark-navy);
         }
 
         .policy-header {
@@ -367,7 +402,7 @@
 
         .policy-content p {
             margin-bottom: 15px;
-            color: #475569;
+            color: #334155;
             font-size: 1.02rem;
         }
 
@@ -375,8 +410,9 @@
             background: #F8FAFC;
             padding: 22px;
             border-radius: 18px;
-            border-left: 4px solid var(--primary-blue);
+            border-left: 5px solid var(--primary-blue);
             margin: 20px 0;
+            border: 1px solid #E2E8F0;
         }
 
         /* FOOTER */
@@ -495,8 +531,8 @@
             <p class="section-desc">Çocuğunuzun zihinsel ve motor becerilerini geliştiren 4 ana mod ve onlarca kategori!</p>
         </div>
 
-        <!-- 1. EĞİTİM MODU -->
-        <div class="mode-container">
+        <!-- 1. EĞİTİM MODU (SOFT MAVİ TEMA) -->
+        <div class="mode-container mode-egitim">
             <div class="mode-header">
                 <div class="mode-badge-icon bg-egitim">📘</div>
                 <div class="mode-title-info">
@@ -588,8 +624,8 @@
             </div>
         </div>
 
-        <!-- 2. OYUN MODU -->
-        <div class="mode-container">
+        <!-- 2. OYUN MODU (SOFT YEŞİL TEMA) -->
+        <div class="mode-container mode-oyun">
             <div class="mode-header">
                 <div class="mode-badge-icon bg-oyun">🧩</div>
                 <div class="mode-title-info">
@@ -633,8 +669,8 @@
             </div>
         </div>
 
-        <!-- 3. ÇİZİM MODU -->
-        <div class="mode-container">
+        <!-- 3. ÇİZİM MODU (SOFT MOR TEMA) -->
+        <div class="mode-container mode-cizim">
             <div class="mode-header">
                 <div class="mode-badge-icon bg-cizim">✏️</div>
                 <div class="mode-title-info">
@@ -662,8 +698,8 @@
             </div>
         </div>
 
-        <!-- 4. MÜZİK VE ENSTRÜMAN MODU -->
-        <div class="mode-container">
+        <!-- 4. MÜZİK VE ENSTRÜMAN MODU (SOFT AMBER TEMA) -->
+        <div class="mode-container mode-muzik">
             <div class="mode-header">
                 <div class="mode-badge-icon bg-muzik">🎹</div>
                 <div class="mode-title-info">
