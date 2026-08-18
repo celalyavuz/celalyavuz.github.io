@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minik Akademi - Harfler, Sayılar ve Eğitici Oyunlar</title>
-    <meta name="description" content="Minik Akademi: 3-7 yaş çocuklar için renkli, eğlenceli ve eğitici harf, sayı, renk ve hayvan öğrenme uygulaması.">
+    <title>Minik Akademi - Okul Öncesi Eğitici Çocuk Oyunları</title>
+    <meta name="description" content="Minik Akademi: 3-7 yaş okul öncesi çocuklar için Harfler, Sayılar, Şekiller, Renkler, Hayvanlar, Çizim, Müzik ve Eğitici Oyunlar dünyası.">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #FF6B6B;
-            --secondary: #4ECDC4;
-            --yellow: #FFE66D;
-            --purple: #9B51E0;
-            --dark: #2C3E50;
-            --bg: #F7F9FC;
+            --primary: #FF5964;
+            --primary-orange: #FF8E53;
+            --yellow: #FFD166;
+            --green: #06D6A0;
+            --blue: #118AB2;
+            --purple: #8338EC;
+            --pink: #FF6496;
+            --dark: #1E293B;
+            --light-bg: #F8FAFC;
+            --card-shadow: 0 12px 30px rgba(0,0,0,0.06);
         }
 
         * {
@@ -24,111 +31,170 @@
             padding: 0;
         }
 
-        body {
-            font-family: 'Fredoka', 'Outfit', sans-serif;
-            background-color: var(--bg);
-            color: var(--dark);
-            line-height: 1.6;
+        html {
+            scroll-behavior: smooth;
         }
 
-        header {
-            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 50%, #FFD166 100%);
-            color: white;
+        body {
+            font-family: 'Fredoka', 'Outfit', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* BANNER HEADER */
+        .top-banner {
+            background: #1E293B;
+            color: #94A3B8;
+            font-size: 0.85rem;
             text-align: center;
-            padding: 60px 20px 80px;
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
-            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.2);
+            padding: 8px 15px;
+            letter-spacing: 0.5px;
+        }
+        .top-banner a {
+            color: var(--yellow);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* HERO SECTION */
+        header {
+            background: linear-gradient(135deg, #FF5964 0%, #FF8E53 45%, #FFD166 100%);
+            color: white;
+            padding: 60px 20px 90px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 0 15px 35px rgba(255, 89, 100, 0.25);
             position: relative;
+            text-align: center;
+        }
+
+        .floating-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
             overflow: hidden;
         }
 
-        header::before {
-            content: "✨ 🎈 🎨 🧩 🦁 🔢 🅰️";
+        .floating-icon {
             position: absolute;
-            top: 15px;
-            left: 0;
-            right: 0;
-            font-size: 1.5rem;
-            opacity: 0.6;
-            letter-spacing: 15px;
+            font-size: 2.2rem;
+            opacity: 0.25;
+            animation: float 6s ease-in-out infinite alternate;
         }
 
-        .logo-badge {
+        .icon-1 { top: 15%; left: 8%; animation-delay: 0s; }
+        .icon-2 { top: 25%; right: 10%; animation-delay: 1.5s; }
+        .icon-3 { bottom: 20%; left: 12%; animation-delay: 3s; }
+        .icon-4 { bottom: 15%; right: 14%; animation-delay: 4.5s; }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-18px) rotate(12deg); }
+        }
+
+        .badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.25);
-            padding: 6px 18px;
+            padding: 8px 22px;
             border-radius: 50px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            backdrop-filter: blur(5px);
+            margin-bottom: 20px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.5px;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
         }
 
-        .subtitle {
-            font-size: 1.3rem;
-            max-width: 600px;
-            margin: 0 auto 25px;
+        .hero-desc {
+            font-size: 1.35rem;
+            max-width: 750px;
+            margin: 0 auto 35px;
+            font-weight: 500;
             opacity: 0.95;
         }
 
-        .btn-playstore {
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            background: #000;
-            color: white;
-            padding: 14px 28px;
+            gap: 10px;
+            padding: 16px 32px;
             border-radius: 50px;
+            font-size: 1.15rem;
+            font-weight: 700;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .btn-playstore:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+        .btn-google {
+            background: #000000;
+            color: #FFFFFF;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .btn-google:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background: #111;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: -40px auto 50px;
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .btn-secondary:hover {
+            transform: translateY(-4px);
+            background: #FFFFFF;
+        }
+
+        /* MAIN WRAPPER */
+        .main-wrapper {
+            max-width: 1140px;
+            margin: -50px auto 60px;
             padding: 0 20px;
+            position: relative;
+            z-index: 2;
         }
 
-        .features-grid {
+        /* QUICK STATS / HIGHLIGHTS */
+        .highlights-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
-        .feature-card {
+        .highlight-card {
             background: white;
-            padding: 30px 20px;
-            border-radius: 24px;
+            padding: 25px;
+            border-radius: 28px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            box-shadow: var(--card-shadow);
+            border: 2px solid #F1F5F9;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .icon-box {
-            width: 70px;
-            height: 70px;
+        .highlight-icon {
+            width: 65px;
+            height: 65px;
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -137,106 +203,525 @@
             margin: 0 auto 15px;
         }
 
-        .card-1 .icon-box { background: #E8FCFF; color: #4ECDC4; }
-        .card-2 .icon-box { background: #FFEAEA; color: #FF6B6B; }
-        .card-3 .icon-box { background: #FFF9DB; color: #F59E0B; }
-        .card-4 .icon-box { background: #F3E8FF; color: #9B51E0; }
+        .hl-1 { background: #E0F2FE; }
+        .hl-2 { background: #DCFCE7; }
+        .hl-3 { background: #F3E8FF; }
+        .hl-4 { background: #FFE4E6; }
 
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 8px;
+        .highlight-card h3 {
+            font-size: 1.2rem;
             color: var(--dark);
+            margin-bottom: 5px;
         }
 
-        .feature-card p {
-            font-size: 0.95rem;
+        .highlight-card p {
+            font-size: 0.92rem;
             color: #64748B;
         }
 
-        .policy-section {
-            background: white;
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-top: 40px;
+        /* SECTION TITLES */
+        .section-title-wrap {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        .policy-section h2 {
+        .section-tag {
+            display: inline-block;
+            color: var(--blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            background: #E0F2FE;
+            padding: 4px 14px;
+            border-radius: 20px;
+        }
+
+        .section-title {
+            font-size: 2.3rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .section-desc {
+            color: #64748B;
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 8px auto 0;
+        }
+
+        /* MODES SECTIONS */
+        .mode-container {
+            background: white;
+            border-radius: 36px;
+            padding: 40px;
+            margin-bottom: 45px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid #F1F5F9;
+        }
+
+        .mode-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px dashed #E2E8F0;
+        }
+
+        .mode-badge-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .bg-egitim { background: linear-gradient(135deg, #118AB2, #06D6A0); }
+        .bg-oyun { background: linear-gradient(135deg, #FF5964, #FF8E53); }
+        .bg-cizim { background: linear-gradient(135deg, #8338EC, #3A86EF); }
+        .bg-muzik { background: linear-gradient(135deg, #FFB703, #FB8500); }
+
+        .mode-title-info h2 {
             font-size: 1.8rem;
             color: var(--dark);
-            margin-bottom: 20px;
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 10px;
-            display: inline-block;
         }
 
-        .policy-section p {
-            margin-bottom: 15px;
-            color: #475569;
+        .mode-title-info p {
+            color: #64748B;
             font-size: 1rem;
         }
 
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #94A3B8;
-            font-size: 0.9rem;
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
-        footer a {
-            color: var(--primary);
+        .sub-card {
+            background: #F8FAFC;
+            border-radius: 20px;
+            padding: 22px;
+            transition: all 0.3s ease;
+            border: 1px solid #E2E8F0;
+        }
+
+        .sub-card:hover {
+            transform: translateY(-4px);
+            background: #FFFFFF;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-color: var(--primary-orange);
+        }
+
+        .sub-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .sub-icon {
+            font-size: 1.8rem;
+        }
+
+        .sub-card h4 {
+            font-size: 1.15rem;
+            color: var(--dark);
+        }
+
+        .sub-card p {
+            font-size: 0.92rem;
+            color: #475569;
+        }
+
+        /* GİZLİLİK POLİTİKASI (PRIVACY POLICY) */
+        .policy-container {
+            background: white;
+            border-radius: 36px;
+            padding: 45px;
+            margin-bottom: 50px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid #F1F5F9;
+        }
+
+        .policy-header {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #E2E8F0;
+        }
+
+        .policy-header h2 {
+            font-size: 1.8rem;
+            color: var(--dark);
+        }
+
+        .policy-content p {
+            margin-bottom: 16px;
+            color: #475569;
+            font-size: 1.02rem;
+        }
+
+        .policy-box {
+            background: #F8FAFC;
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 4px solid var(--blue);
+            margin: 20px 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0F172A;
+            color: #94A3B8;
+            padding: 50px 20px 30px;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--yellow);
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .ads-txt-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            color: #CBD5E1;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero-desc { font-size: 1.15rem; }
+            .mode-container { padding: 25px; }
+            .policy-container { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-badge">Okul Öncesi Eğitici Çocuk Oyunu</div>
-        <h1>Minik Akademi</h1>
-        <p class="subtitle">Çocuklar için Harfler, Sayılar, Şekiller, Renkler ve Eğlenceli Oyun Dünyası!</p>
-        <a href="https://play.google.com/store/apps/details?id=com.cyvz.minikakademi" target="_blank" class="btn-playstore">
-            <span>▶</span> Google Play'de İndir
-        </a>
-    </header>
-
-    <div class="container">
-        <div class="features-grid">
-            <div class="feature-card card-1">
-                <div class="icon-box">🅰️</div>
-                <h3>Harf ve Alfabe</h3>
-                <p>Sesli anlatımlarla Türkçe alfabeyi kolayca ve eğlenerek öğrenin.</p>
-            </div>
-            <div class="feature-card card-2">
-                <div class="icon-box">🔢</div>
-                <h3>Sayılar ve Sayma</h3>
-                <p>1'den 10'a kadar sayıları tanıyın, nesneleri saymayı öğrenin.</p>
-            </div>
-            <div class="feature-card card-3">
-                <div class="icon-box">🎨</div>
-                <h3>Renkler & Şekiller</h3>
-                <p>Canlı renkleri ve temel geometrik şekilleri keşfedin.</p>
-            </div>
-            <div class="feature-card card-4">
-                <div class="icon-box">🦁</div>
-                <h3>Hayvanlar & Taşıtlar</h3>
-                <p>Sevimli hayvan sesleri ve taşıt görselleri ile öğrenim dünyası.</p>
-            </div>
-        </div>
-
-        <div class="policy-section">
-            <h2>Gizlilik Politikası (Privacy Policy)</h2>
-            <p><strong>Minik Akademi</strong> uygulaması olarak çocuklarınızın güvenliğine ve gizliliğine en yüksek derecede önem veriyoruz.</p>
-            <p><strong>Veri Toplama:</strong> Uygulamamız kişisel veri (isim, e-posta, konum, rehber vb.) <u>toplamaz ve saklamaz</u>.</p>
-            <p><strong>Çocuk Güvenliği:</strong> Uygulamamız 3-7 yaş grubu çocukların güvenle kullanabileceği şekilde tasarlanmıştır. Zararlı veya uygunsuz içerik barındırmaz.</p>
-            <p><strong>Reklamlar:</strong> Uygulamamızda Google AdMob çocuk dostu ve aile politikalarına uygun reklam standartları kullanılmaktadır.</p>
-            <p>İletişim: Sorularınız için <strong>ansayazilim@gmail.com</strong> adresi üzerinden bizimle iletişime geçebilirsiniz.</p>
-        </div>
+    <!-- Üst Duyuru Bandı -->
+    <div class="top-banner">
+        🎉 Minik Akademi Google Play Store'da Yayında! 
+        <a href="https://play.google.com/store/apps/details?id=com.cyvz.minikakademi" target="_blank">Hemen İncele & İndir &rarr;</a>
     </div>
 
+    <!-- Hero Alanı -->
+    <header>
+        <div class="floating-icons">
+            <span class="floating-icon icon-1">🎨</span>
+            <span class="floating-icon icon-2">🅰️</span>
+            <span class="floating-icon icon-3">🔢</span>
+            <span class="floating-icon icon-4">🎵</span>
+        </div>
+
+        <div class="badge">3–7 Yaş Okul Öncesi Eğitici Çocuk Oyunu</div>
+        <h1>Minik Akademi</h1>
+        <p class="hero-desc">
+            Çocuklar için Harfler, Sayılar, Şekiller, Renkler, Çizim, Müzik ve Eğlenceli Zeka Oyunları ile dolu interaktif bir öğrenme dünyası!
+        </p>
+
+        <div class="hero-btns">
+            <a href="https://play.google.com/store/apps/details?id=com.cyvz.minikakademi" target="_blank" class="btn btn-google">
+                <span>▶</span> Google Play'den İndir
+            </a>
+            <a href="#modlar" class="btn btn-secondary">
+                <span>🔍</span> Modları Keşfet
+            </a>
+        </div>
+    </header>
+
+    <!-- Ana İçerik Alanı -->
+    <div class="main-wrapper" id="modlar">
+
+        <!-- Öne Çıkan Özellikler -->
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-icon hl-1">🎓</div>
+                <h3>Eğitici & Sesli</h3>
+                <p>Türkçe seslendirmeli harfler, sayılar ve kavramlar.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon hl-2">🎮</div>
+                <h3>Eğlenceli Oyunlar</h3>
+                <p>Eşleştirme, bulmaca ve mantık yürütme modları.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon hl-3">🎨</div>
+                <h3>Çizim & Yazma</h3>
+                <p>Harf ve sayı çizim takibi, serbest boyama tuvali.</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon hl-4">🎵</div>
+                <h3>Müzik & Ritim</h3>
+                <p>Çocuk enstrümanları, melodiler ve ritim etkinlikleri.</p>
+            </div>
+        </div>
+
+        <div class="section-title-wrap">
+            <span class="section-tag">Uygulama İçeriği</span>
+            <h2 class="section-title">Minik Akademi'de Neler Var?</h2>
+            <p class="section-desc">Çocuğunuzun zihinsel ve motor becerilerini geliştiren 4 ana mod ve onlarca kategori!</p>
+        </div>
+
+        <!-- 1. EĞİTİM MODU -->
+        <div class="mode-container">
+            <div class="mode-header">
+                <div class="mode-badge-icon bg-egitim">📘</div>
+                <div class="mode-title-info">
+                    <h2>1. Eğitim Modu</h2>
+                    <p>Temel kavramları ve alfabeyi sesli anlatımlarla kolayca öğrenin.</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🅰️</span>
+                        <h4>Harf ve Alfabe</h4>
+                    </div>
+                    <p>Türkçe alfabedeki tüm harflerin okunuşları, telaffuzları ve örnek kelimeler.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🔢</span>
+                        <h4>Sayılar ve Sayma</h4>
+                    </div>
+                    <p>1'den 10'a ve ötesine kadar sayıları tanıma, nesne sayma çalışmaları.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">📐</span>
+                        <h4>Şekiller</h4>
+                    </div>
+                    <p>Kare, daire, üçgen, dikdörtgen ve temel geometrik formlar.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🎨</span>
+                        <h4>Renkler</h4>
+                    </div>
+                    <p>Kırmızı, mavi, sarı, yeşil ve tüm canlı renklerin sesli tanıtımı.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🍎</span>
+                        <h4>Meyveler & Sebzeler</h4>
+                    </div>
+                    <p>Sağlıklı besinleri, meyveleri ve sebzeleri eğlenerek tanıma.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🦁</span>
+                        <h4>Hayvanlar & Sesleri</h4>
+                    </div>
+                    <p>Sevimli dostlarımızı ve doğadaki gerçek seslerini dinleme.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🚗</span>
+                        <h4>Taşıtlar</h4>
+                    </div>
+                    <p>Kara, deniz ve hava ulaşım araçları (araba, uçak, gemi vb.).</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">👨‍⚕️</span>
+                        <h4>Meslekler</h4>
+                    </div>
+                    <p>Doktor, itfaiyeci, polis, öğretmen gibi mesleklerin tanıtımı.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">😊</span>
+                        <h4>Duygular</h4>
+                    </div>
+                    <p>Mutlu, üzgün, şaşkın gibi duygu ifadelerini kavrama.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🌍</span>
+                        <h4>Mevsimler & Dünyamız</h4>
+                    </div>
+                    <p>İlkbahar, yaz, sonbahar, kış ve doğamızın güzellikleri.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. OYUN MODU -->
+        <div class="mode-container">
+            <div class="mode-header">
+                <div class="mode-badge-icon bg-oyun">🧩</div>
+                <div class="mode-title-info">
+                    <h2>2. Oyun Modu</h2>
+                    <p>Öğrenilen bilgileri pekiştiren eğlenceli zeka ve hafıza oyunları.</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🔄</span>
+                        <h4>Eşleştirme Oyunları</h4>
+                    </div>
+                    <p>Resimler, harfler ve sayılar arasında doğru eşleşmeyi bulma bulmacaları.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🔎</span>
+                        <h4>Nesne & Ses Bulma</h4>
+                    </div>
+                    <p>Sorulan nesneyi veya duyulan sesi ekranda doğru şekilde tespit etme oyunu.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">📊</span>
+                        <h4>Sıralama ve Mantık</h4>
+                    </div>
+                    <p>Küçükten büyüğe sıralama, mantık yürütme ve dikkat geliştirici aktiviteler.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🧩</span>
+                        <h4>Yapboz & Yeri Belirleme</h4>
+                    </div>
+                    <p>Parçaları doğru yerlerine sürükleyip bırakarak motor becerilerini güçlendirme.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. ÇİZİM MODU -->
+        <div class="mode-container">
+            <div class="mode-header">
+                <div class="mode-badge-icon bg-cizim">✏️</div>
+                <div class="mode-title-info">
+                    <h2>3. Çizim ve Yazma Modu</h2>
+                    <p>Hayal gücünü renklendiren serbest çizim ve harf/sayı yazma çalışmaları.</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">✍️</span>
+                        <h4>Harf ve Sayı Takibi (Tracing)</h4>
+                    </div>
+                    <p>Çizgileri takip ederek harf ve sayıları doğru yazmayı adım adım öğrenin.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🎨</span>
+                        <h4>Serbest Çizim Tuvali</h4>
+                    </div>
+                    <p>Farklı renklerde fırçalar, fırça boyutları ve silgi ile özgürce resim yapın.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. MÜZİK VE ENSTRÜMAN MODU -->
+        <div class="mode-container">
+            <div class="mode-header">
+                <div class="mode-badge-icon bg-muzik">🎹</div>
+                <div class="mode-title-info">
+                    <h2>4. Müzik ve Enstrüman Modu</h2>
+                    <p>Müzik kulağını geliştiren çocuk enstrümanları ve melodiler.</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🎹</span>
+                        <h4>Çocuk Piyanosu & Ksilofon</h4>
+                    </div>
+                    <p>Renkli tuşlara basarak kendi melodilerini oluşturma ve ritim öğrenme.</p>
+                </div>
+
+                <div class="sub-card">
+                    <div class="sub-card-header">
+                        <span class="sub-icon">🎶</span>
+                        <h4>Eğlenceli Çocuk Melodileri</h4>
+                    </div>
+                    <p>Çocuklara uygun neşeli ve eğitici ses efektleri ile ritim duygusu kazanımı.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GİZLİLİK POLİTİKASI (PRIVACY POLICY) -->
+        <div class="policy-container" id="gizlilik">
+            <div class="policy-header">
+                <h2>🔒 Gizlilik Politikası (Privacy Policy)</h2>
+            </div>
+            <div class="policy-content">
+                <p><strong>Minik Akademi</strong> olarak çocuklarınızın güvenliğine ve kişisel veri gizliliğine en yüksek düzeyde önem veriyoruz. Uygulamamız 3-7 yaş grubu okul öncesi çocukların güvenli bir ortamda eğitim alması için tasarlanmıştır.</p>
+                
+                <div class="policy-box">
+                    <p><strong>1. Kişisel Veri Toplanmaz:</strong> Uygulamamız isim, e-posta adresi, telefon numarası, cihaz kişisel bilgileri veya hassas veri <u>toplamaz, saklamaz ve işlemez</u>.</p>
+                    <p><strong>2. Çocuk Güvenliği ve Aile Politikası:</strong> Uygulamamız Google Play Aileler Politikası (Families Policy) ve COPPA (Çocukların Çevrim İçi Gizliliğini Koruma Kanunu) standartlarına tamamen uygundur.</p>
+                    <p><strong>3. Reklam Politikaları:</strong> Uygulamamızda Google AdMob çocuk dostu ve aile standartlarına uygun reklam ağı kullanılmaktadır. Reklamlar çocuklar için güvenli ve filtrelenmiş içeriklerden oluşur.</p>
+                </div>
+
+                <p>Sorularınız, istekleriniz veya geri bildirimleriniz için geliştirici ekibimizle iletişime geçebilirsiniz:</p>
+                <p>📧 <strong>E-Posta:</strong> <a href="mailto:ansayazilim@gmail.com" style="color: var(--blue);">ansayazilim@gmail.com</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Minik Akademi. Tüm hakları saklıdır. | <a href="/app-ads.txt">app-ads.txt</a></p>
+        <p><strong>Minik Akademi</strong> &bull; Ansa Yazılım</p>
+        
+        <div class="footer-links">
+            <a href="https://play.google.com/store/apps/details?id=com.cyvz.minikakademi" target="_blank">Google Play Mağazası</a>
+            <a href="#gizlilik">Gizlilik Politikası</a>
+            <a href="mailto:ansayazilim@gmail.com">İletişim</a>
+            <a href="/app-ads.txt" target="_blank">app-ads.txt (AdMob)</a>
+        </div>
+
+        <p>&copy; 2026 Minik Akademi. Tüm Hakları Saklıdır.</p>
+        
+        <div style="margin-top: 15px;">
+            <a href="/app-ads.txt" target="_blank" class="ads-txt-badge">
+                AdMob Yayıncı Doğrulaması: app-ads.txt
+            </a>
+        </div>
     </footer>
 
 </body>
